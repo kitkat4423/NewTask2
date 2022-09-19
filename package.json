@@ -1,0 +1,33 @@
+{
+  "name": "pictures",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "format:code": "prettier --write *.js",
+    "lint": "eslint src/*.{ts,json}",
+    "lint:fix": "eslint src/*.{ts,json} --quiet --fix",
+    "prepare": "husky install"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "eslint": "^8.23.1",
+    "husky": "^8.0.0",
+    "lint-staged": "^13.0.3",
+    "prettier": "^2.7.1",
+    "typescript": "^4.8.3"
+  },
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.37.0",
+    "@typescript-eslint/parser": "^5.37.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1"
+  },
+  "lint-staged": {
+    "*.ts": [
+      "npm run lint"
+    ]
+  }
+}
